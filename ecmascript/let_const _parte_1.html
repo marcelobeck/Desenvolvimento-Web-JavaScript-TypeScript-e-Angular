@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <script>
+
+            //escopos: global, função, bloco
+
+            // Variáveis declaradas com o operador VAR são acessiveis pelos escopos inferiores, é usada como variável Global. 
+            // Variáveis LET e CONST não podem serem usadas como globais, só a variavel var.
+
+            /* a única diferença entra a variável LET e CONST é que a variável CONST vem de constante não pode 
+               ter seu valor modificado ao longo do processamento do script
+
+               Ex de uso, são links, senhas
+            */
+
+            function escopoFuncao() {
+                
+                if(true) {
+                    if(true) {
+                        var serie = 'Game of Thrones'
+                    }
+                }
+
+                console.log('funcao: ', serie)
+                
+            }
+
+            escopoFuncao()
+
+            console.log('global: ', serie)
+
+            {
+                console.log('global: ', serie)
+            }
+
+        </script>
+    </body>
+</html>

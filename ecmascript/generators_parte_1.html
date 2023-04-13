@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <div id="teste"></div>
+        <script>            
+            
+            function* testeGenerator() { // Cria uma finção generator
+                yield 'Teste 1' // função que executa essa linha e o que vier antes
+                yield 'Teste 2'
+                yield 'Teste 3'
+                return 'Teste 4'
+            }
+
+            let meuGenerator = testeGenerator() //objeto iterator
+            //console.log(meuGenerator)
+
+            console.log(meuGenerator.next()) // mostra o conteúdo do objeto
+            console.log('------')
+            console.log(meuGenerator.next())
+            console.log('------')
+            console.log(meuGenerator.next())
+            console.log('------')
+            console.log(meuGenerator.next())
+            
+        </script>
+    </body>
+</html>
